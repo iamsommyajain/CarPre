@@ -1,18 +1,17 @@
 {
+    "name": "car-price-predictor",
     "version": 2,
     "builds": [
-        {
-            "src": "./index.py",
-            "use": "@vercel/python",
-            "config": {
-                "runtime": "python3.8"
-            }
-        }
+      {
+        "src": "api/app.py",
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "api/app.py"
+      }
     ]
-}
+  }
+  

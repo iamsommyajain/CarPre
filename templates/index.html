@@ -43,7 +43,11 @@
                     </div>
                     <div class="col-md-10 form-group" style="text-align: center">
                         <label><b>Select the model:</b> </label><br>
-                        <select class="selectpicker form-control" id="car_models" name="car_models" required="1">
+                        <select class="selectpicker form-control" id="car_model" name="car_model" required="1"
+                                onchange="load_car_models(this.id,'car_models')">
+                            {% for car_model in car_models %}
+                            <option value="{{ car_model }}">{{ car_model }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="col-md-10 form-group" style="text-align: center">
